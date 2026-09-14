@@ -22,9 +22,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <span className="font-serif text-3xl font-semibold tracking-tight">
-              ACCE<span className="text-accent"> LAW</span>
-              <span className="font-light text-xl ml-1 tracking-widest">CHAMBERS</span>
+            <span className="font-serif text-3xl tracking-normal">
+              ACCE <span className="text-accent">LAW</span>
+              <span className="block font-sans text-[10px] tracking-[0.35em] leading-none">CHAMBERS</span>
             </span>
             <p className="mt-6 text-sm text-primary-foreground/70 leading-relaxed max-w-xs">
               A distinguished law firm delivering exceptional legal services 

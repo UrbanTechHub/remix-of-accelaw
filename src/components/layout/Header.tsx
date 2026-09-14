@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -17,8 +17,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const isLightHeroPage = location.pathname.startsWith("/attorneys/") && location.pathname !== "/attorneys";
-  const isDarkHeroPage = !isLightHeroPage;
+  const isDarkHeroPage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,13 +39,17 @@ export function Header() {
       <nav className="container-wide" aria-label="Global">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <span className={cn(
-              "font-serif text-2xl md:text-3xl font-semibold tracking-tight transition-colors duration-300",
-              scrolled ? "text-foreground" : isDarkHeroPage ? "text-primary-foreground" : "text-foreground"
+              "flex h-9 w-9 items-center justify-center border text-xs tracking-[0.2em] transition-colors duration-300",
+              scrolled || !isDarkHeroPage ? "border-accent text-accent" : "border-primary-foreground/60 text-primary-foreground"
+            )}>A</span>
+            <span className={cn(
+              "font-serif text-xl md:text-2xl tracking-normal transition-colors duration-300",
+              scrolled || !isDarkHeroPage ? "text-foreground" : "text-primary-foreground"
             )}>
-              ACCE<span className="text-accent"> LAW</span>
-              <span className="font-light text-lg md:text-xl ml-1 tracking-widest">CHAMBERS</span>
+              ACCE <span className="text-accent">LAW</span>
+              <span className="block font-sans text-[9px] tracking-[0.3em] leading-none">CHAMBERS</span>
             </span>
           </Link>
 
@@ -80,23 +83,9 @@ export function Header() {
 
           {/* CTA */}
           <div className="hidden lg:flex lg:items-center lg:gap-6">
-            <a
-              href="tel:+19786414537"
-              className={cn(
-                "flex items-center gap-2 text-sm transition-colors",
-                scrolled 
-                  ? "text-muted-foreground hover:text-accent" 
-                  : isDarkHeroPage 
-                    ? "text-primary-foreground/70 hover:text-primary-foreground"
-                    : "text-muted-foreground hover:text-accent"
-              )}
-            >
-              <Phone className="h-4 w-4" />
-              +1 (978) 641-4537
-            </a>
             <Button
               asChild
-              className="bg-accent text-accent-foreground px-6 rounded-full"
+              className="bg-transparent border border-accent text-accent px-5 uppercase tracking-[0.18em] text-xs hover:bg-accent hover:text-accent-foreground rounded-none"
             >
               <Link to="/contact" className="flex items-center gap-2">
                 Consultation
@@ -154,16 +143,9 @@ export function Header() {
             ))}
           </div>
           <div className="pt-4 mt-4 border-t border-border space-y-4">
-            <a
-              href="tel:+19786414537"
-              className="flex items-center gap-2 text-muted-foreground"
-            >
-              <Phone className="h-4 w-4" />
-              +1 (978) 641-4537
-            </a>
             <Button
               asChild
-              className="w-full bg-accent text-accent-foreground rounded-full"
+              className="w-full bg-accent text-accent-foreground rounded-none uppercase tracking-[0.18em] text-xs"
             >
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
                 Schedule Consultation

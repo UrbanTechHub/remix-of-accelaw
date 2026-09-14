@@ -14,16 +14,16 @@ export function AttorneyCard({ attorney, className }: AttorneyCardProps) {
       to={`/attorneys/${attorney.id}`}
       className={cn("group block", className)}
     >
-      <div className="card-elegant overflow-hidden h-full">
+      <div className="card-elegant overflow-hidden h-full group-hover:border-accent/40">
         <div className="aspect-[4/5] overflow-hidden bg-secondary relative">
           <img
             src={attorney.image}
             alt={attorney.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-            <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
+            <div className="flex h-10 w-10 items-center justify-center bg-accent">
               <ArrowUpRight className="h-5 w-5 text-accent-foreground" />
             </div>
           </div>
@@ -32,7 +32,7 @@ export function AttorneyCard({ attorney, className }: AttorneyCardProps) {
           <h3 className="heading-card text-foreground">
             {attorney.name}
           </h3>
-          <p className="text-xs sm:text-sm text-accent font-medium mt-1 tracking-wide uppercase">
+          <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-accent sm:text-sm">
             {attorney.title}
           </p>
           <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4 line-clamp-2">

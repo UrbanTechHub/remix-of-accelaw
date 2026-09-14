@@ -2,52 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Franklin:wght@300;400;500;600&display=swap');
-
 @layer base {
   :root {
-    --background: 30 20% 97%;
-    --foreground: 0 10% 12%;
+    --background: 210 33% 97%;
+    --foreground: 216 36% 12%;
 
-    --card: 30 15% 99%;
-    --card-foreground: 0 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 36% 12%;
 
-    --popover: 30 15% 99%;
-    --popover-foreground: 0 10% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 36% 12%;
 
-    --primary: 0 10% 14%;
-    --primary-foreground: 30 20% 96%;
+    --primary: 220 59% 15%;
+    --primary-foreground: 210 33% 97%;
 
-    --secondary: 30 15% 93%;
-    --secondary-foreground: 0 10% 14%;
+    --secondary: 214 35% 93%;
+    --secondary-foreground: 220 59% 15%;
 
-    --muted: 30 12% 91%;
-    --muted-foreground: 0 5% 42%;
+    --muted: 214 29% 90%;
+    --muted-foreground: 216 16% 42%;
 
-    --accent: 350 45% 38%;
+    --accent: 211 47% 43%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 12% 88%;
-    --input: 30 12% 88%;
-    --ring: 350 45% 38%;
+    --border: 214 24% 83%;
+    --input: 214 24% 83%;
+    --ring: 211 47% 43%;
 
     --radius: 0.375rem;
 
-    /* Custom tokens - Classic Burgundy & Charcoal */
-    --burgundy: 350 45% 38%;
-    --burgundy-light: 350 35% 55%;
-    --burgundy-dark: 350 50% 28%;
-    --charcoal: 0 10% 14%;
-    --charcoal-light: 0 8% 22%;
-    --slate: 0 5% 35%;
-    --pearl: 30 20% 97%;
-    --cream: 35 30% 95%;
+    /* Custom tokens - Navy Trust */
+    --navy: 220 59% 15%;
+    --navy-light: 213 51% 24%;
+    --blue: 211 47% 43%;
+    --ice: 210 33% 97%;
+    --steel: 216 16% 42%;
 
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Libre Franklin', system-ui, sans-serif;
+    --font-serif: 'DM Serif Display', Georgia, serif;
+    --font-sans: 'Fira Sans', system-ui, sans-serif;
 
     --shadow-sm: 0 1px 2px hsl(200 25% 10% / 0.04);
     --shadow-md: 0 4px 12px hsl(200 25% 10% / 0.08);
@@ -86,7 +81,7 @@
     --muted: 0 8% 15%;
     --muted-foreground: 30 10% 58%;
 
-    --accent: 350 45% 38%;
+     --accent: 211 47% 43%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -94,16 +89,16 @@
 
     --border: 0 8% 18%;
     --input: 0 8% 18%;
-    --ring: 350 45% 38%;
+     --ring: 211 47% 43%;
 
     --sidebar-background: 0 8% 10%;
     --sidebar-foreground: 30 15% 92%;
-    --sidebar-primary: 350 45% 38%;
+     --sidebar-primary: 211 47% 43%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 6% 16%;
     --sidebar-accent-foreground: 30 15% 92%;
     --sidebar-border: 0 6% 16%;
-    --sidebar-ring: 350 45% 38%;
+     --sidebar-ring: 211 47% 43%;
   }
 }
 
@@ -125,22 +120,26 @@
     font-family: var(--font-serif);
     @apply tracking-tight;
   }
+
+  ::selection {
+    @apply bg-accent text-accent-foreground;
+  }
 }
 
 @layer components {
   .heading-display {
     font-family: var(--font-serif);
-    @apply text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.03] tracking-normal;
   }
 
   .heading-section {
     font-family: var(--font-serif);
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-normal tracking-normal;
   }
 
   .heading-card {
     font-family: var(--font-serif);
-    @apply text-xl md:text-2xl font-medium;
+    @apply text-xl md:text-2xl font-normal;
   }
 
   .text-body {
@@ -161,13 +160,13 @@
   }
 
   .card-elegant {
-    @apply bg-card rounded-lg border border-border;
+    @apply bg-card border border-border transition-all duration-500;
     box-shadow: var(--shadow-card);
   }
 
   .card-elegant:hover {
     box-shadow: var(--shadow-hover);
-    @apply border-accent/20 -translate-y-1;
+    @apply border-accent/40 -translate-y-1;
   }
 
   .section-padding {
@@ -183,7 +182,7 @@
   }
 
   .glass-effect {
-    @apply bg-background/80 backdrop-blur-xl;
+    @apply bg-primary/90 backdrop-blur-xl;
   }
 
   .gradient-text {
@@ -205,6 +204,14 @@
 
   .divider-elegant {
     @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  .story-link {
+    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-500 hover:scale-[1.02];
   }
 }
 

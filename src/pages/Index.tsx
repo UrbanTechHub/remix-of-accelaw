@@ -158,7 +158,7 @@ const Index = () => {
             <StaggerContainer className="grid border-t border-border sm:grid-cols-2">
               {values.map((value) => (
                 <StaggerItem key={value.title}>
-                  <div className="border-b border-border py-7 sm:px-7 sm:first:pl-0 sm:nth-[3]:pl-0">
+                  <div className="border-b border-border py-7 sm:px-7 sm:first:pl-0">
                     <value.icon className="mb-5 h-7 w-7 text-accent" strokeWidth={1.25} />
                     <h3 className="font-serif text-2xl text-foreground">{value.title}</h3>
                     <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{value.desc}</p>

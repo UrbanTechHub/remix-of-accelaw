@@ -17,7 +17,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const isDarkHeroPage = location.pathname === "/";
+  const isDarkHeroPage = false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,17 +39,15 @@ export function Header() {
       <nav className="container-wide" aria-label="Global">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="group flex flex-col">
             <span className={cn(
-              "flex h-9 w-9 items-center justify-center border text-xs tracking-[0.2em] transition-colors duration-300",
-              scrolled || !isDarkHeroPage ? "border-accent text-accent" : "border-primary-foreground/60 text-primary-foreground"
-            )}>A</span>
-            <span className={cn(
-              "font-serif text-xl md:text-2xl tracking-normal transition-colors duration-300",
-              scrolled || !isDarkHeroPage ? "text-foreground" : "text-primary-foreground"
+              "font-serif text-lg md:text-xl font-bold uppercase leading-none tracking-tighter transition-colors duration-300",
+              scrolled ? "text-foreground" : "text-foreground"
             )}>
-              ACCE <span className="text-accent">LAW</span>
-              <span className="block font-sans text-[9px] tracking-[0.3em] leading-none">CHAMBERS</span>
+              Acce Law
+            </span>
+            <span className="mt-1 font-sans text-[9px] uppercase tracking-[0.3em] text-plum leading-none">
+              Chambers · Sydney
             </span>
           </Link>
 

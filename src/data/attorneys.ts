@@ -110,9 +110,9 @@ export const attorneys: Attorney[] = [
     email: "j.brian@accelawchambers.com",
     bio: "Jeff Brian is a Partner and head of the Intellectual Property and Technology practice at Acce Law Chambers. With over 15 years of specialized experience, he has built one of the premier IP practices in the United States, advising technology companies, startups, and established enterprises on the full range of intellectual property matters. His expertise spans patent prosecution and litigation, trademark protection, trade secret disputes, licensing negotiations, and technology transactions. Jeff Brian has a particular focus on the intersection of IP law and emerging technologies, including artificial intelligence, blockchain, and digital platforms. He regularly represents clients before U.S. IP offices and in IP litigation before federal courts. Before joining Acce Law Chambers, Jeff Brian spent three years at a leading international law firm, which gives him unique insight into the technology industry and cross-border IP matters. He is a sought-after advisor for tech startups seeking to protect their innovations and scale globally.",
     education: ["J.D., Stanford Law School", "B.S., Massachusetts Institute of Technology"],
-    admissions: ["United States (2009)", "Massachusetts (2009)"],
+    admissions: ["United States (2009)", "Oregon (2009)"],
     image: markusHoffmann,
-    location: "United States",
+    location: "Portland, Oregon",
     featured: false,
     notableCases: [
       "Successfully defended a U.S. automotive technology company in a $180 million patent infringement dispute (2023)",

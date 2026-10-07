@@ -52,13 +52,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-         navy: {
-           DEFAULT: "hsl(var(--navy))",
-           light: "hsl(var(--navy-light))",
-         },
-         blue: "hsl(var(--blue))",
-         ice: "hsl(var(--ice))",
-         steel: "hsl(var(--steel))",
+         aubergine: "hsl(var(--aubergine))",
+         plum: "hsl(var(--plum))",
+         stone: "hsl(var(--stone))",
+         cream: "hsl(var(--cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -205,12 +205,12 @@ export const attorneys: Attorney[] = [
     ]
   },
   {
-    id: "jeff-brian",
-    name: "Jeff Brian",
+    id: "nathan-cole",
+    name: "Nathan Cole",
     title: "Associate",
     practiceAreas: ["Litigation", "Securities"],
-    email: "j.brian@accelawchambers.com",
-    bio: "Jeff Brian is an Associate in the Litigation and Securities practice at Acce Law Chambers. Since joining the firm in 2020, he has developed a focused practice in securities litigation, regulatory enforcement, and complex commercial disputes. Jeff regularly represents public companies, boards of directors, and individual executives in SEC investigations, securities class actions, and shareholder disputes. He has particular expertise in defending against insider trading allegations, market manipulation claims, and disclosure violations. Jeff also advises on corporate governance matters and conducts internal investigations for clients facing regulatory scrutiny. His analytical approach and attention to detail have made him a valuable member of the litigation team on several high-profile matters. Before joining Acce Law Chambers, Jeff completed a judicial clerkship at the U.S. District Court for the District of Massachusetts, where he gained firsthand insight into judicial decision-making in commercial cases. He combines this practical courtroom perspective with deep knowledge of US securities regulations. Jeff is an active participant in securities law forums and has published articles on recent developments in US capital markets regulation.",
+    email: "n.cole@accelawchambers.com",
+    bio: "Nathan Cole is an Associate in the Litigation and Securities practice at Acce Law Chambers. Since joining the firm in 2020, he has developed a focused practice in securities litigation, regulatory enforcement, and complex commercial disputes. Nathan regularly represents public companies, boards of directors, and individual executives in SEC investigations, securities class actions, and shareholder disputes. He has particular expertise in defending against insider trading allegations, market manipulation claims, and disclosure violations. Nathan also advises on corporate governance matters and conducts internal investigations for clients facing regulatory scrutiny. His analytical approach and attention to detail have made him a valuable member of the litigation team on several high-profile matters. Before joining Acce Law Chambers, Nathan completed a judicial clerkship at the U.S. District Court for the District of Massachusetts, where he gained firsthand insight into judicial decision-making in commercial cases. He combines this practical courtroom perspective with deep knowledge of US securities regulations. Nathan is an active participant in securities law forums and has published articles on recent developments in US capital markets regulation.",
     education: ["J.D., Harvard Law School", "B.A., Georgetown University"],
     admissions: ["United States (2020)", "Massachusetts (2020)"],
     image: janSchneider,
